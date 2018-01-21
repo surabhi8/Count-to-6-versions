@@ -1,0 +1,22 @@
+{
+  "name": "count-to-6",
+  "version": "1.0.0",
+  "main": "program.test.js",
+  "scripts": {
+    "test": "jest program.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surabhi8/Count-to-6-versions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/surabhi8/Count-to-6-versions/issues"
+  },
+  "homepage": "https://github.com/surabhi8/Count-to-6-versions#readme",
+  "description": "",
+  "devDependencies": {
+    "jest": "^22.1.4"
+  }
+}
