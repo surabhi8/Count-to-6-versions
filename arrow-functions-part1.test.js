@@ -1,25 +1,22 @@
-const mapReduce = require('./arrow-functions-part1.js')
-console = {
-  log: jest.fn()
+const mapReduce = require('./arrow-functions-part1.js');
+
+{
+  const inputs = [];
+  test('empty array reduced to empty', () => {
+    expect(mapReduce(inputs)).toBe(`[${inputs}] becomes `);
+  });
 }
 {
-let inputs = []
-mapReduce(inputs)
-test('empty array becomes empty',()=>{
-  expect(console.log).toHaveBeenCalledWith("["+inputs+"] becomes ");
-})
+  const inputs = ['Hello', 'arrow', 'functions'];
+  mapReduce(inputs);
+  test('["Hello","arrow","functions"] becomes Haf', () => {
+    expect(mapReduce(inputs)).toBe(`[${inputs}] becomes Haf`);
+  });
 }
 {
-let inputs = ["Hello","arrow","functions"]
-mapReduce(inputs)
-test('["Hello","arrow","functions"] becomes Haf',()=>{
-  expect(console.log).toHaveBeenCalledWith("["+inputs+"] becomes Haf");
- })
-}
-{
-let inputs = ["Hello"," "," "]
-mapReduce(inputs)
-test('["Hello"," "," "] becomes H',()=>{
-  expect(console.log).toHaveBeenCalledWith("["+inputs+"] becomes H  ");
- })
+  const inputs = ['Hello', ' ', ' '];
+  mapReduce(inputs);
+  test('["Hello"," "," "] becomes H', () => {
+    expect(mapReduce(inputs)).toBe(`[${inputs}] becomes `);
+  });
 }

@@ -1,4 +1,4 @@
 function print() {
-  console.log("HELLO ES6");
+  return 'HELLO ES6';
 }
-module.exports = print
+module.exports = print;
